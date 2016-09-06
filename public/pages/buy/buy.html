@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="panel-group col-sm-12" ng-repeat="item in items track by $index">
+
+        <div class="panel panel-primary col-sm-6">
+            <div class="panel-heading">{{"item : " + item.item}} </div>
+            <div class="panel-body">{{" description : "+ item.description}}</div>
+            <hr>
+
+            <div class="panel-body">{{"the owner : " +item.owner}}</div>
+            <div class="panel-body"><img src="{{item.imageurl}}"></div>
+            <div class="panel-body">{{"price" +item.price}}</div>
+            <div class="col-sm-12 form-group">
+                <select class="form-control" ng-options="person as person.FullName for person in people track by person._id" ng-model="buyer"></select>
+
+<!--
+                <select class="form-control" ng-model="trading.owner">
+                    <option ng-repeat="name in people" ng-model="buyerName" value="{{name._id}}">{{name.FullName}}</option>
+                </select>
+-->
+            </div>
+
+            <button type="button" class="btn btn-primary  center-block submit-button" ng-click="buyItem(item, buyer, $index)">Buy</button>
+
+        </div>
+    </div>
+</div>

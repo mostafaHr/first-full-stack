@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="panel-group col-sm-12">
+
+        <div class="panel panel-primary col-sm-6">
+
+
+            <select class="form-control" ng-options="person as person.FullName for person in people track by person._id" ng-model="person"></select>
+
+
+
+            <button type="button" class="btn btn-primary  center-block submit-button" ng-click="getMyitems(person)">view my items</button>
+        </div>
+
+
+        <div class="panel-group col-sm-12" ng-repeat="item in myItems track by $index">
+
+            <div class="panel panel-primary col-sm-6">
+                <div class="panel-heading">{{"item : " + item.item}} </div>
+                <div class="panel-body">{{" description : "+ item.description}}</div>
+                <hr>
+
+                <div class="panel-body"><img src="{{item.imageurl}}"></div>
+                <div class="panel-body">{{"price = " +item.price}}</div>
+                <div class="panel-body">{{"For Sell :  " +item.forsell}}</div>
+
+
+
+            </div>
+        </div>

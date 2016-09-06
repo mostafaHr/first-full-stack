@@ -1,0 +1,53 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-8 hgt2 blue col-sm-offset-2">
+            <div class="row">
+                <form name="myForm">
+                    <div class="col-sm-6 form-group">
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2 blue hgt">
+                                <h1 class="text">Sell Item</h1>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 form-group">
+                            <input type="text" class="form-control" placeholder="Item" ng-model="trading.item" required>
+                        </div>
+
+
+                        <div class="col-sm-12 form-group">
+                            <select class="form-control" ng-model="trading.owner">
+                                <option ng-repeat="name in info" value="{{name._id}}">{{name.FullName}}</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-12 form-group">
+                            <input type="text" class="form-control" placeholder="Image Url" ng-model="trading.imageurl" required>
+                        </div>
+
+
+                        <div class="col-sm-12 form-group">
+                            <input type="number" class="form-control" placeholder="price" ng-model="trading.price" required>
+                        </div>
+
+
+                        <div class="col-sm-12 form-group">
+                            <textarea rows=5 placeholder="description" class="form-control" ng-model="trading.description"></textarea>
+
+                            <button type="button" class="btn btn-primary  center-block submit-button" ng-click="additem(trading)" ng-disabled="myForm.$invalid">Submit</button>
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

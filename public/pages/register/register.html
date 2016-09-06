@@ -1,0 +1,43 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-8 hgt2 blue col-sm-offset-2">
+            <div class="row">
+                <form name="myForm">
+                    <div class="col-sm-6 form-group">
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2 blue hgt">
+                                <h1 class="text">Register</h1>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 form-group">
+                            <input type="text" class="form-control" placeholder="Full Name" ng-model="info.FullName" required>
+                        </div>
+
+                        <div class="col-sm-12 form-group">
+                            <input type="text" class="form-control" placeholder="City" ng-model="info.City" required>
+                        </div>
+
+                        <div class="col-sm-12 form-group">
+                            <input type="text" class="form-control" placeholder="Phone number" ng-model="info.PhoneNumber" required>
+                        </div>
+
+                        <div class="col-sm-12 form-group">
+                            <input type="text" class="form-control" placeholder="E-mail adress" ng-model="info.Email" required>
+                        </div>
+
+
+
+
+                        <div class="col-sm-2 form-group">
+                            <button type="button" class="btn btn-primary  center-block submit-button" ng-click="addInfo(info)" ng-disabled="myForm.$invalid">Register</button>
+
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
